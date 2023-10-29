@@ -14,6 +14,8 @@ public enum Icons {
         case messages = "message"
         case profile = "person"
         case settings = "gearshape"
+        
+        public var view: some View { Image(systemName: rawValue) }
     }
 
     /// Названия остальных иконок
@@ -43,17 +45,9 @@ public enum Icons {
         case globe = "globe.europe.africa"
         case personQuestion = "person.fill.questionmark"
         case calendar
-    }
-
-    public enum Misc: String, CaseIterable {
         case chevron = "chevron.forward"
-
-        static var chevronView: some View {
-            Image(systemName: Icons.Misc.chevron.rawValue)
-                .resizable()
-                .frame(width: 7, height: 12)
-                .foregroundColor(.swSmallElements)
-        }
+        
+        public var view: some View { Image(systemName: rawValue) }
     }
 }
 
@@ -64,7 +58,7 @@ public enum Icons {
             VStack(alignment: .leading, spacing: 16) {
                 ForEach(Icons.Tabbar.allCases, id: \.rawValue) { icon in
                     HStack(spacing: 16) {
-                        Image(systemName: icon.rawValue)
+                        icon.view
                         Text(icon.rawValue)
                     }
                 }
@@ -74,24 +68,13 @@ public enum Icons {
             VStack(alignment: .leading, spacing: 16) {
                 ForEach(Icons.Regular.allCases, id: \.rawValue) { icon in
                     HStack(spacing: 16) {
-                        Image(systemName: icon.rawValue)
-                        Text(icon.rawValue)
-                    }
-                }
-            }
-        }
-        Section("Misc icons") {
-            VStack(alignment: .leading, spacing: 16) {
-                ForEach(Icons.Misc.allCases, id: \.rawValue) { icon in
-                    HStack(spacing: 16) {
-                        Image(systemName: icon.rawValue)
+                        icon.view
                         Text(icon.rawValue)
                     }
                 }
             }
         }
     }
-    .listStyle(.plain)
     .previewDisplayName("Icons")
 }
 #endif

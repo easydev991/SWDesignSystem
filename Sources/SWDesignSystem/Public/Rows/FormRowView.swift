@@ -50,7 +50,7 @@ public extension FormRowView {
             case let .textWithChevron(text):
                 HStack(spacing: 12) {
                     trailingTextView(text)
-                    if isEnabled { Icons.Misc.chevronView }
+                    if isEnabled { ChevronView() }
                 }
             case let .textWithBadgeAndChevron(text, badgeValue):
                 HStack(spacing: 12) {
@@ -58,7 +58,7 @@ public extension FormRowView {
                     if badgeValue > 0 {
                         BadgeView(value: badgeValue)
                     }
-                    if isEnabled { Icons.Misc.chevronView }
+                    if isEnabled { ChevronView() }
                 }
             }
         }
