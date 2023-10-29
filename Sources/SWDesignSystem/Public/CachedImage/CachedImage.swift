@@ -26,7 +26,7 @@ public struct CachedImage: View {
                 .scaledToFill()
                 .onTapGesture { didTapImage?(uiImage) }
         } placeholder: {
-            RoundedDefaultImage(size: mode.size)
+            DefaultWorkoutImage(size: mode.size)
         }
         .frame(width: mode.size.width, height: mode.size.height)
         .clipped()

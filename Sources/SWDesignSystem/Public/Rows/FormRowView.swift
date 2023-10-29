@@ -87,6 +87,5 @@ public extension FormRowView {
             .previewDisplayName(scheme == .dark ? "Dark" : "Light")
         }
     }
-    .previewLayout(.sizeThatFits)
 }
 #endif

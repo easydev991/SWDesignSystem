@@ -18,16 +18,16 @@ public enum Icons {
 
     /// Названия остальных иконок
     public enum Regular: String, CaseIterable {
-        case info = "info.circle"
-        case plus = "plus.circle"
+        case plusCircle = "plus.circle"
+        case plus
+        case share = "square.and.arrow.up"
+        case noSignal = "wifi.exclamationmark"
         case gearshape
         case refresh = "arrow.triangle.2.circlepath"
         case exclamation = "exclamationmark.triangle"
         case exclamationArrowCircle = "exclamationmark.arrow.circlepath"
         case xmarkCircle = "xmark.circle"
-        case xmark
-        case filterOff = "line.3.horizontal.decrease.circle"
-        case filterOn = "line.3.horizontal.decrease.circle.fill"
+        case filter = "line.3.horizontal.decrease.circle"
         case magnifyingglass
         case trash
         case pencil
@@ -40,9 +40,7 @@ public enum Icons {
         case deletePerson = "person.crop.circle.badge.minus"
         case signPost = "signpost.right"
         case key = "key.fill"
-        case envelope
         case globe = "globe.europe.africa"
-        case person = "person.fill"
         case personQuestion = "person.fill.questionmark"
         case calendar
     }

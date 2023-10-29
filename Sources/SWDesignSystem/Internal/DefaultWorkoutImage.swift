@@ -1,16 +1,16 @@
 import SwiftUI
 
 /// Дефолтная картинка `Workout`, можно задать размер в инициализаторе
-public struct RoundedDefaultImage: View {
+struct DefaultWorkoutImage: View {
     private let size: CGSize
 
     /// Инициализирует `RoundedDefaultImage`
     /// - Parameter size: Размер картинки
-    public init(size: CGSize) {
+    init(size: CGSize) {
         self.size = size
     }
 
-    public var body: some View {
+    var body: some View {
         Image.defaultWorkout
             .resizable()
             .scaledToFit()
@@ -21,10 +21,9 @@ public struct RoundedDefaultImage: View {
 #if DEBUG
 #Preview {
     VStack(spacing: 16) {
-        RoundedDefaultImage(size: .init(width: 45, height: 45))
-        RoundedDefaultImage(size: .init(width: 60, height: 60))
+        DefaultWorkoutImage(size: .init(width: 45, height: 45))
+        DefaultWorkoutImage(size: .init(width: 60, height: 60))
     }
     .padding()
-    .previewLayout(.sizeThatFits)
 }
 #endif

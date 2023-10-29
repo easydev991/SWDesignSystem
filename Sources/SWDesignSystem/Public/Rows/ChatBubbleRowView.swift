@@ -80,6 +80,5 @@ public extension ChatBubbleRowView {
         )
     }
     .padding(.horizontal)
-    .previewLayout(.sizeThatFits)
 }
 #endif

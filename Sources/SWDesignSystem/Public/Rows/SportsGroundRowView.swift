@@ -106,6 +106,5 @@ private extension SportsGroundRowView {
             .previewDisplayName(scheme == .dark ? "Dark" : "Light")
         }
     }
-    .previewLayout(.sizeThatFits)
 }
 #endif

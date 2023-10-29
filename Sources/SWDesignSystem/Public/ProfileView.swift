@@ -63,6 +63,5 @@ public struct ProfileView: View {
         countryAndCity: "Россия, Краснодар"
     )
     .padding(.horizontal, 40)
-    .previewLayout(.sizeThatFits)
 }
 #endif

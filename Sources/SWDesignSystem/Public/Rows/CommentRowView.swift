@@ -65,7 +65,7 @@ private extension CommentRowView {
         Menu {
             if isCommentByMainUser {
                 Button(action: editAction) {
-                    Label("Изменить", systemImage: "rectangle.and.pencil.and.ellipsis")
+                    Label("Изменить", systemImage: Icons.Regular.pencil.rawValue)
                 }
                 Button(role: .destructive, action: deleteAction) {
                     Label("Удалить", systemImage: "trash")
@@ -119,6 +119,5 @@ private extension CommentRowView {
         deleteAction: {}
     )
     .padding()
-    .previewLayout(.sizeThatFits)
 }
 #endif

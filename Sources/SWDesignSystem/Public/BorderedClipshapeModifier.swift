@@ -47,6 +47,5 @@ public extension BorderedClipshapeModifier {
             .frame(width: 120, height: 120)
             .borderedClipshape(.roundedRectangle)
     }
-    .previewLayout(.sizeThatFits)
 }
 #endif

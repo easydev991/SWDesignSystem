@@ -92,6 +92,5 @@ private extension EventRowView {
         .environment(\.colorScheme, .dark)
     }
     .padding()
-    .previewLayout(.sizeThatFits)
 }
 #endif

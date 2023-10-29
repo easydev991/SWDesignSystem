@@ -171,6 +171,5 @@ private extension JournalRowView {
         .environment(\.colorScheme, .dark)
     }
     .padding()
-    .previewLayout(.sizeThatFits)
 }
 #endif

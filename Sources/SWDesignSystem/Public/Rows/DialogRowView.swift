@@ -93,6 +93,6 @@ private extension DialogRowView {
             unreadCount: 3
         )
     )
-    .previewLayout(.sizeThatFits)
+    .padding()
 }
 #endif

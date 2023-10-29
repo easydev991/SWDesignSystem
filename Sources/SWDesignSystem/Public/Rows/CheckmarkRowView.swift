@@ -31,6 +31,5 @@ public struct TextWithCheckmarkRowView: View {
     TextWithCheckmarkRowView(text: "Checked text", isChecked: true)
         .insideCardBackground(padding: 0)
         .padding()
-        .previewLayout(.sizeThatFits)
 }
 #endif
