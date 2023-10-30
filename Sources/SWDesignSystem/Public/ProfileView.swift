@@ -39,11 +39,13 @@ public struct ProfileView: View {
                     .font(.system(size: 22, weight: .bold))
                 VStack(alignment: .leading, spacing: 6) {
                     HStack(spacing: 8) {
-                        Image(systemName: Icons.Regular.personInCircle.rawValue)
+                        Icons.Regular.person.view
+                            .symbolVariant(.circle)
                         Text(genderWithAge)
                     }
                     HStack(spacing: 8) {
-                        Image(systemName: Icons.Regular.location.rawValue)
+                        Icons.Regular.location.view
+                            .symbolVariant(.circle)
                         Text(countryAndCity)
                             .lineLimit(2)
                     }

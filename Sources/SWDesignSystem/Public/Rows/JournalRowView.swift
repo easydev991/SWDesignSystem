@@ -139,7 +139,7 @@ private extension JournalRowView {
                     }
                 }
             } label: {
-                Image(systemName: "ellipsis")
+                Image(systemName: Icons.Regular.ellipsis.rawValue)
                     .frame(width: 30, height: 30, alignment: .topTrailing)
                     .foregroundColor(.swSmallElements)
             }

@@ -49,10 +49,10 @@ private extension EventRowView {
 
     var eventDateTimeInfo: some View {
         HStack(spacing: 6) {
-            Image(systemName: Icons.Regular.clock.rawValue)
-                .foregroundColor(.swAccent)
+            Icons.Regular.clock.view
+                .foregroundStyle(Color.swAccent)
             Text(dateTimeText)
-                .foregroundColor(.swSmallElements)
+                .foregroundStyle(Color.swSmallElements)
                 .font(.subheadline)
                 .lineLimit(1)
         }
@@ -63,8 +63,9 @@ private extension EventRowView {
     var locationInfoIfNeeded: some View {
         if let locationText {
             HStack(spacing: 6) {
-                Image(systemName: Icons.Regular.location.rawValue)
-                    .foregroundColor(.swAccent)
+                Icons.Regular.location.view
+                    .symbolVariant(.circle)
+                    .foregroundStyle(Color.swAccent)
                 Text(locationText)
                     .foregroundColor(.swSmallElements)
                     .font(.subheadline)

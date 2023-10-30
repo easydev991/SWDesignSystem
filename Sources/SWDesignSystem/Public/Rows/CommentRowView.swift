@@ -68,7 +68,7 @@ private extension CommentRowView {
                     Label("Изменить", systemImage: Icons.Regular.pencil.rawValue)
                 }
                 Button(role: .destructive, action: deleteAction) {
-                    Label("Удалить", systemImage: "trash")
+                    Label("Удалить", systemImage: Icons.Regular.trash.rawValue)
                 }
             } else {
                 Button(role: .destructive, action: reportAction) {
@@ -76,7 +76,7 @@ private extension CommentRowView {
                 }
             }
         } label: {
-            Image(systemName: "ellipsis")
+            Image(systemName: Icons.Regular.ellipsis.rawValue)
                 .frame(width: 30, height: 30, alignment: .topTrailing)
                 .foregroundColor(.swSmallElements)
         }

@@ -38,11 +38,12 @@ private extension ContentInSheet {
                 Button {
                     dismiss()
                 } label: {
-                    Image(systemName: Icons.Regular.xmarkCircle.rawValue)
+                    Image(systemName: Icons.Regular.xmark.rawValue)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 20)
                         .foregroundColor(.swAccent)
+                        .symbolVariant(.circle)
                 }
                 .padding(.trailing)
             }

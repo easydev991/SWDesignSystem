@@ -16,7 +16,7 @@ public struct TextWithCheckmarkRowView: View {
                 .foregroundColor(.swMainText)
                 .frame(maxWidth: .infinity, alignment: .leading)
             if isChecked {
-                Image(systemName: "checkmark")
+                Icons.Regular.checkmark.view
                     .foregroundColor(.swAccent)
             }
         }
