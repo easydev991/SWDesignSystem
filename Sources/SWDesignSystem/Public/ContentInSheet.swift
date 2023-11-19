@@ -35,15 +35,8 @@ private extension ContentInSheet {
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 50)
             .overlay(alignment: .trailing) {
-                Button {
+                CloseButton(mode: .xmark) {
                     dismiss()
-                } label: {
-                    Image(systemName: Icons.Regular.xmark.rawValue)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20)
-                        .foregroundColor(.swAccent)
-                        .symbolVariant(.circle)
                 }
                 .padding(.trailing)
             }
