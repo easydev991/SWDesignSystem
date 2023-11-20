@@ -52,9 +52,7 @@ private extension SportsGroundRowView {
     var addressIfNeeded: some View {
         if let address {
             HStack(spacing: 6) {
-                Icons.Regular.location.view
-                    .symbolVariant(.circle)
-                    .foregroundStyle(Color.swAccent)
+                SystemImageWithFrame(Icons.Regular.location.rawValue)
                 makeSubtitleView(with: address)
             }
         }
@@ -62,9 +60,7 @@ private extension SportsGroundRowView {
 
     var participantsInfo: some View {
         HStack(spacing: 6) {
-            Icons.Regular.person.view
-                .symbolVariant(.circle)
-                .foregroundStyle(Color.swAccent)
+            SystemImageWithFrame(Icons.Regular.person.rawValue)
             makeSubtitleView(with: usersTrainHereText)
         }
     }

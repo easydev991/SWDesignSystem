@@ -16,6 +16,7 @@ public enum Icons {
         case settings = "gearshape"
         
         public var view: some View { Image(systemName: rawValue) }
+        public var imageView: Image { Image(systemName: rawValue) }
     }
 
     /// Названия остальных иконок
@@ -25,7 +26,7 @@ public enum Icons {
         case eye
         case checkmark
         case share = "square.and.arrow.up"
-        case noSignal = "wifi.exclamationmark"
+        case noSignal = "wifi.slash"
         case gearshape
         case refresh = "arrow.triangle.2.circlepath"
         case exclamation = "exclamationmark.triangle"
@@ -50,6 +51,7 @@ public enum Icons {
         case chevron = "chevron.forward"
         
         public var view: some View { Image(systemName: rawValue) }
+        public var imageView: Image { Image(systemName: rawValue) }
     }
 }
 
