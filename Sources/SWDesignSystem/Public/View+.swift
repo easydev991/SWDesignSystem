@@ -34,9 +34,4 @@ public extension View {
     func hapticFeedback(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
         UIImpactFeedbackGenerator(style: style).impactOccurred()
     }
-    
-    /// Заворачивает контент в `NavigationStack` или `NavigationView`
-    func insideNavigation() -> some View {
-        modifier(InsideNavigationModifier())
-    }
 }

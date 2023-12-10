@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "SWDesignSystem", targets: ["SWDesignSystem"])
     ],
     dependencies: [
-        .package(url: "https://github.com/OlegEremenko991/CachedAsyncImage991", from: "1.0.4")
+        .package(url: "https://github.com/OlegEremenko991/CachedAsyncImage991", from: "1.0.8")
     ],
     targets: [
         .target(
