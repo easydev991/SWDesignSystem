@@ -2,7 +2,7 @@ import CachedAsyncImage991
 import SwiftUI
 
 /// Вьюшка с площадкой (в списке площадок)
-public struct SportsGroundRowView: View {
+public struct ParkRowView: View {
     private let imageURL: URL?
     private let title: String
     private let address: String?
@@ -24,7 +24,7 @@ public struct SportsGroundRowView: View {
         HStack(alignment: .top, spacing: 12) {
             leadingImage
             VStack(alignment: .leading, spacing: 6) {
-                sportsGroundTitle
+                parkTitle
                     .padding(.bottom, 2)
                 addressIfNeeded
                 participantsInfo
@@ -35,12 +35,12 @@ public struct SportsGroundRowView: View {
     }
 }
 
-private extension SportsGroundRowView {
+private extension ParkRowView {
     var leadingImage: some View {
-        CachedImage(url: imageURL, mode: .groundListItem)
+        CachedImage(url: imageURL, mode: .parkListItem)
     }
 
-    var sportsGroundTitle: some View {
+    var parkTitle: some View {
         Text(title)
             .foregroundColor(.swMainText)
             .font(.headline)
@@ -79,19 +79,19 @@ private extension SportsGroundRowView {
     Group {
         ForEach(ColorScheme.allCases, id: \.self) { scheme in
             VStack(spacing: 12) {
-                SportsGroundRowView(
+                ParkRowView(
                     imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
                     title: "N° 3 Легендарная / Средняя",
                     address: "м. Партизанская, улица 2-я Советская",
                     usersTrainHereText: "Тренируются 5 человек"
                 )
-                SportsGroundRowView(
+                ParkRowView(
                     imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
                     title: "N° 3 Легендарная / Средняя",
                     address: nil,
                     usersTrainHereText: "Тренируются 5 человек"
                 )
-                SportsGroundRowView(
+                ParkRowView(
                     imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
                     title: "N° 3 Легендарная / Средняя",
                     address: "м. Партизанская, улица 2-я Советская",
