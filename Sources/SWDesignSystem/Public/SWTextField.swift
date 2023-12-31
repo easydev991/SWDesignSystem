@@ -32,7 +32,7 @@ public struct SWTextField: View {
     public var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             textFieldView
-                .foregroundColor(.swMainText)
+                .foregroundStyle(Color.swMainText)
                 .padding(12)
                 .background {
                     RoundedRectangle(cornerRadius: 8)
@@ -85,14 +85,12 @@ private extension SWTextField {
             Text(.init(message))
                 .font(.subheadline)
                 .multilineTextAlignment(.leading)
-                .foregroundColor(.swError)
+                .foregroundStyle(Color.swError)
         }
     }
 
     var borderColor: Color {
-        guard errorState == nil else {
-            return .swError
-        }
+        guard errorState == nil else { return .swError }
         return isFocused ? .swAccent : .swSeparators
     }
 }

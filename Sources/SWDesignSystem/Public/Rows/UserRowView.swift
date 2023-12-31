@@ -110,7 +110,7 @@ private extension UserRowView {
 
     var userNameView: some View {
         Text(baseModel.name)
-            .foregroundColor(.swMainText)
+            .foregroundStyle(Color.swMainText)
             .font(.headline)
     }
 
@@ -122,7 +122,7 @@ private extension UserRowView {
     var addressViewIfAvailable: some View {
         if !baseModel.address.isEmpty {
             Text(baseModel.address)
-                .foregroundColor(.swSmallElements)
+                .foregroundStyle(Color.swSmallElements)
                 .font(.subheadline)
         }
     }

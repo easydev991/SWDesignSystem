@@ -78,27 +78,27 @@ private extension CommentRowView {
         } label: {
             Image(systemName: Icons.Regular.ellipsis.rawValue)
                 .frame(width: 30, height: 30, alignment: .topTrailing)
-                .foregroundColor(.swSmallElements)
+                .foregroundStyle(Color.swSmallElements)
         }
         .onTapGesture { hapticFeedback(.rigid) }
     }
 
     var userNameView: some View {
         Text(userName)
-            .foregroundColor(.swMainText)
+            .foregroundStyle(Color.swMainText)
             .font(.headline)
     }
 
     var dateTextView: some View {
         Text(dateText)
-            .foregroundColor(.swSmallElements)
+            .foregroundStyle(Color.swSmallElements)
             .font(.caption2)
     }
 
     var bodyTextView: some View {
         Text(.init(bodyText))
             .fixedSize(horizontal: false, vertical: true)
-            .foregroundColor(.swMainText)
+            .foregroundStyle(Color.swMainText)
             .tint(.swAccent)
             .textSelection(.enabled)
             .multilineTextAlignment(.leading)

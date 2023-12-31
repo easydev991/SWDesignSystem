@@ -52,16 +52,16 @@ public extension ListRowView {
 
         public static func makeIconView(with name: Icons.Regular) -> some View {
             RoundedRectangle(cornerRadius: 8, style: .continuous)
+                .fill(Color.swTintedButton)
                 .frame(width: 34, height: 34)
-                .foregroundColor(.swTintedButton)
                 .overlay {
                     Image(systemName: name.rawValue)
-                        .foregroundColor(.swAccent)
+                        .foregroundStyle(Color.swAccent)
                 }
         }
 
         private func makeTextView(with text: LocalizedStringKey) -> some View {
-            Text(text).foregroundColor(.swMainText)
+            Text(text).foregroundStyle(Color.swMainText)
         }
     }
 
@@ -94,7 +94,7 @@ public extension ListRowView {
         }
 
         private func makeTextView(with text: LocalizedStringKey) -> some View {
-            Text(text).foregroundColor(.swSmallElements)
+            Text(text).foregroundStyle(Color.swSmallElements)
         }
     }
 }

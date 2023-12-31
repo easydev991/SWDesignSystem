@@ -13,11 +13,11 @@ public struct TextWithCheckmarkRowView: View {
         HStack(spacing: 10) {
             Text(.init(text))
                 .lineLimit(1)
-                .foregroundColor(.swMainText)
+                .foregroundStyle(Color.swMainText)
                 .frame(maxWidth: .infinity, alignment: .leading)
             if isChecked {
                 Icons.Regular.checkmark.view
-                    .foregroundColor(.swAccent)
+                    .foregroundStyle(Color.swAccent)
             }
         }
         .padding(12)

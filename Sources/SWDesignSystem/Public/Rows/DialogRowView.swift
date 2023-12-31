@@ -63,21 +63,21 @@ private extension DialogRowView {
 
     var authorNameView: some View {
         Text(model.authorName)
-            .foregroundColor(.swMainText)
+            .foregroundStyle(Color.swMainText)
             .font(.headline)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     var dateTextView: some View {
         Text(model.dateText)
-            .foregroundColor(.swSmallElements)
+            .foregroundStyle(Color.swSmallElements)
             .font(.footnote.weight(.medium))
     }
 
     var messageView: some View {
         Text(model.messageText)
             .font(.subheadline)
-            .foregroundColor(.swSmallElements)
+            .foregroundStyle(Color.swSmallElements)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

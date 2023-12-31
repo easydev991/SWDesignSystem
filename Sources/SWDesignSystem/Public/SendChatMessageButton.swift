@@ -12,8 +12,8 @@ public struct SendChatMessageButton: View {
     public var body: some View {
         Button(action: action) {
             Circle()
+                .fill(isEnabled ? Color.swAccent : Color.swDisabledButton)
                 .frame(width: 39, height: 39)
-                .foregroundColor(isEnabled ? .swAccent : .swDisabledButton)
                 .overlay {
                     Icons.Regular.arrowUp.view
                         .foregroundStyle(Color.swBackground)

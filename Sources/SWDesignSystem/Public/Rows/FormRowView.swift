@@ -22,7 +22,7 @@ public struct FormRowView: View {
         HStack(spacing: 12) {
             Text(.init(title))
                 .font(.headline)
-                .foregroundColor(.swMainText)
+                .foregroundStyle(Color.swMainText)
                 .fixedSize()
                 .frame(maxWidth: .infinity, alignment: .leading)
             trailingContent.makeView(isEnabled: isEnabled)
@@ -66,7 +66,7 @@ public extension FormRowView {
         private func trailingTextView(_ text: String) -> some View {
             Text(text)
                 .font(.subheadline)
-                .foregroundColor(.swSmallElements)
+                .foregroundStyle(Color.swSmallElements)
         }
     }
 }

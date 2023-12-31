@@ -31,7 +31,7 @@ private extension ContentInSheet {
         Text(title)
             .lineLimit(1)
             .font(.headline)
-            .foregroundColor(.swMainText)
+            .foregroundStyle(Color.swMainText)
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 50)
             .overlay(alignment: .trailing) {

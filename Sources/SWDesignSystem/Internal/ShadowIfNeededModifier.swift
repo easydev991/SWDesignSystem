@@ -20,8 +20,8 @@ struct ShadowIfNeededModifier: ViewModifier {
         .padding()
         .background {
             RoundedRectangle(cornerRadius: 12)
+                .fill(Color.swCardBackground)
                 .frame(height: 50)
-                .foregroundColor(.swCardBackground)
                 .withShadow()
         }
 }

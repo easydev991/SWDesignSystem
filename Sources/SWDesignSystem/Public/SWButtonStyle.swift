@@ -33,13 +33,13 @@ public struct SWButtonStyle: ButtonStyle {
                 .lineLimit(1)
                 .font(.headline)
         }
-        .foregroundColor(foregroundColor)
+        .foregroundStyle(foregroundColor)
         .padding(.vertical, size.verticalPadding)
         .padding(.horizontal, size.horizontalPadding)
         .frame(maxWidth: maxWidth)
         .background {
             RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .foregroundColor(backgroundColor(configuration.isPressed))
+                .fill(backgroundColor(configuration.isPressed))
         }
         .scaleEffect(configuration.isPressed ? 0.98 : 1)
         .animation(.easeIn(duration: 0.1), value: configuration.isPressed)

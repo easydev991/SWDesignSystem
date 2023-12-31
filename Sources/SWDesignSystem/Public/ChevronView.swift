@@ -8,7 +8,7 @@ public struct ChevronView: View {
         Image(systemName: Icons.Regular.chevron.rawValue)
             .resizable()
             .frame(width: 7, height: 12)
-            .foregroundColor(.swSmallElements)
+            .foregroundStyle(Color.swSmallElements)
     }
 }
 

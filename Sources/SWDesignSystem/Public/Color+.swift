@@ -52,7 +52,7 @@ public extension Color {
                         Circle()
                             .environment(\.colorScheme, .dark)
                     }
-                    .foregroundColor(color)
+                    .foregroundStyle(color)
                     .frame(width: 50, height: 50)
                 }
             }

@@ -42,7 +42,7 @@ private extension ParkRowView {
 
     var parkTitle: some View {
         Text(title)
-            .foregroundColor(.swMainText)
+            .foregroundStyle(Color.swMainText)
             .font(.headline)
             .lineLimit(2)
             .multilineTextAlignment(.leading)
@@ -67,7 +67,7 @@ private extension ParkRowView {
 
     func makeSubtitleView(with text: String) -> some View {
         Text(text)
-            .foregroundColor(.swSmallElements)
+            .foregroundStyle(Color.swSmallElements)
             .font(.subheadline)
             .lineLimit(2)
             .multilineTextAlignment(.leading)

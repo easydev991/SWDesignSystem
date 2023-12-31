@@ -35,7 +35,7 @@ public struct ProfileView: View {
                 Text(login)
                     .lineLimit(2)
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.swMainText)
+                    .foregroundStyle(Color.swMainText)
                     .font(.system(size: 22, weight: .bold))
                 VStack(alignment: .leading, spacing: 6) {
                     HStack(spacing: 8) {
@@ -50,7 +50,7 @@ public struct ProfileView: View {
                             .lineLimit(2)
                     }
                 }
-                .foregroundColor(.swSmallElements)
+                .foregroundStyle(Color.swSmallElements)
             }
         }
     }

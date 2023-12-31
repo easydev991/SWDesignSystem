@@ -17,7 +17,7 @@ struct SectionSupplementaryView: View {
     var body: some View {
         Text(text)
             .textCase(mode.textCase)
-            .foregroundColor(.swSmallElements)
+            .foregroundStyle(Color.swSmallElements)
             .font(.footnote)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading, mode.hasLeftPadding ? 12 : 0)
@@ -62,12 +62,13 @@ extension SectionSupplementaryView {
         ForEach(headers, id: \.self) { text in
             SectionSupplementaryView(.init(text), mode: .header(hasLeftPadding: true))
             RoundedRectangle(cornerRadius: 12)
-                .foregroundColor(.gray.opacity(0.3))
+                .fill(.gray.opacity(0.3))
             SectionSupplementaryView(.init(text), mode: .footer)
+            Spacer().frame(height: 16)
             SectionSupplementaryView(.init(text), mode: .header(hasLeftPadding: false))
             RoundedRectangle(cornerRadius: 12)
-                .foregroundColor(.black.opacity(0.3))
-            Spacer().frame(height: 50)
+                .fill(.black.opacity(0.3))
+            Spacer().frame(height: 16)
         }
     }
     .padding()

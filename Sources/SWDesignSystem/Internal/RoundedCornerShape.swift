@@ -18,7 +18,7 @@ struct RoundedCornerShape: Shape {
 #if DEBUG
 #Preview {
     Rectangle()
-        .foregroundColor(.blue)
+        .fill(.blue)
         .clipShape(RoundedCornerShape(radius: 20, corners: .bottomLeft))
 }
 #endif

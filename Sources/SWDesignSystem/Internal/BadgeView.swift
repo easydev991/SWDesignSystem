@@ -5,7 +5,7 @@ struct BadgeView: View {
 
     var body: some View {
         Image(systemName: "\(value).circle.fill")
-            .foregroundColor(.swAccent)
+            .foregroundStyle(Color.swAccent)
     }
 }
 

@@ -41,7 +41,7 @@ private extension EventRowView {
 
     var eventTitle: some View {
         Text(title)
-            .foregroundColor(.swMainText)
+            .foregroundStyle(Color.swMainText)
             .font(.headline)
             .lineLimit(2)
             .multilineTextAlignment(.leading)
@@ -64,7 +64,7 @@ private extension EventRowView {
             HStack(spacing: 6) {
                 SystemImageWithFrame(Icons.Regular.location.rawValue)
                 Text(locationText)
-                    .foregroundColor(.swSmallElements)
+                    .foregroundStyle(Color.swSmallElements)
                     .font(.subheadline)
                     .lineLimit(1)
             }

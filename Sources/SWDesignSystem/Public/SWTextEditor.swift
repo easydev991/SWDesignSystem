@@ -40,7 +40,7 @@ public struct SWTextEditor: View {
             .overlay(alignment: .topLeading) {
                 if let placeholder {
                     Text(.init(placeholder))
-                        .foregroundColor(.swSeparators)
+                        .foregroundStyle(Color.swSeparators)
                         .multilineTextAlignment(.leading)
                         .opacity(text.isEmpty ? 1 : 0)
                         .padding(.top, 10)

@@ -21,17 +21,17 @@ public struct ChatBubbleRowView: View {
             spacing: 6
         ) {
             Text(message)
-                .foregroundColor(messageType.messageColor)
+                .foregroundStyle(messageType.messageColor)
                 .padding(.vertical, 12)
                 .padding(.horizontal, 18)
                 .background {
                     Rectangle()
+                        .fill(messageType.bubbleColor)
                         .clipShape(RoundedCornerShape(radius: 20, corners: corners))
-                        .foregroundColor(messageType.bubbleColor)
                 }
             Text(messageTime)
                 .font(.caption2)
-                .foregroundColor(.swSmallElements)
+                .foregroundStyle(Color.swSmallElements)
         }
         .textSelection(.enabled)
         .padding(messageType == .sent ? .leading : .trailing, 50)

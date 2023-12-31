@@ -109,20 +109,20 @@ private extension JournalRowView {
 
     var titleView: some View {
         Text(model.title)
-            .foregroundColor(.swMainText)
+            .foregroundStyle(Color.swMainText)
             .font(.headline)
     }
 
     var dateTextView: some View {
         Text(model.dateText)
-            .foregroundColor(.swSmallElements)
+            .foregroundStyle(Color.swSmallElements)
             .font(.footnote.weight(.medium))
     }
 
     var bodyTextView: some View {
         Text(.init(model.bodyText))
             .font(.subheadline)
-            .foregroundColor(.swMainText)
+            .foregroundStyle(Color.swMainText)
             .tint(.swAccent)
             .textSelection(.enabled)
             .multilineTextAlignment(.leading)
@@ -141,7 +141,7 @@ private extension JournalRowView {
             } label: {
                 Image(systemName: Icons.Regular.ellipsis.rawValue)
                     .frame(width: 30, height: 30, alignment: .topTrailing)
-                    .foregroundColor(.swSmallElements)
+                    .foregroundStyle(Color.swSmallElements)
             }
             .onTapGesture { hapticFeedback(.rigid) }
         }
