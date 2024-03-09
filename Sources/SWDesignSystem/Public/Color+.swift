@@ -46,15 +46,9 @@ public extension Color {
     return ScrollView {
         VStack(spacing: 4) {
             ForEach(colors, id: \.self) { color in
-                HStack(spacing: 20) {
-                    Group {
-                        Circle()
-                        Circle()
-                            .environment(\.colorScheme, .dark)
-                    }
+                Circle()
                     .foregroundStyle(color)
                     .frame(width: 50, height: 50)
-                }
             }
         }
         .frame(maxWidth: .infinity)

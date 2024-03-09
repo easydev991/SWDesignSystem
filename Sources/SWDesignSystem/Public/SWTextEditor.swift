@@ -89,6 +89,6 @@ private extension SWTextEditor {
             height: 100
         )
     }
-    .padding()
+    .padding(.horizontal)
 }
 #endif

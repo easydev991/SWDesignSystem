@@ -116,6 +116,6 @@ public extension ListRowView {
             ListRowView(leadingContent: model.left, trailingContent: model.right)
         }
     }
-    .padding()
+    .padding(.horizontal)
 }
 #endif

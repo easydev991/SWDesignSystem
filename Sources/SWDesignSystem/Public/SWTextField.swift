@@ -119,6 +119,6 @@ private extension SWTextField {
             errorState: .message("Error message")
         )
     }
-    .padding()
+    .padding(.horizontal)
 }
 #endif
