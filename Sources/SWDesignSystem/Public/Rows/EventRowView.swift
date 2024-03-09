@@ -1,4 +1,3 @@
-import CachedAsyncImage991
 import SwiftUI
 
 /// Вьюшка с мероприятием (в списке мероприятий)
@@ -74,21 +73,12 @@ private extension EventRowView {
 
 #if DEBUG
 #Preview {
-    VStack(spacing: 30) {
-        EventRowView(
-            imageURL: nil,
-            title: "Открытая воскресная тренировка #3 в 2023 году (участники)",
-            dateTimeText: "22 янв, 12:00",
-            locationText: "Россия, Москва"
-        )
-        EventRowView(
-            imageURL: nil,
-            title: "Открытая воскресная тренировка #3 в 2023 году (участники)",
-            dateTimeText: "22 янв, 12:00",
-            locationText: "Россия, Москва"
-        )
-        .environment(\.colorScheme, .dark)
-    }
-    .padding()
+    EventRowView(
+        imageURL: nil,
+        title: "Открытая воскресная тренировка #3 в 2023 году (участники)",
+        dateTimeText: "22 янв, 12:00",
+        locationText: "Россия, Москва"
+    )
+    .padding(.horizontal)
 }
 #endif

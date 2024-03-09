@@ -49,12 +49,20 @@ public struct SWTextFieldSearchButton: View {
 
 #if DEBUG
 #Preview {
-    SWTextFieldSearchButton(
-        "Найти город",
-        showClearButton: true,
-        mainAction: { print("main action!") },
-        clearAction: { print("clear action")}
-    )
-    .padding()
+    VStack(spacing: 16) {
+        SWTextFieldSearchButton(
+            "Найти город",
+            showClearButton: false,
+            mainAction: { print("main action!") },
+            clearAction: {}
+        )
+        SWTextFieldSearchButton(
+            "Красноярск",
+            showClearButton: true,
+            mainAction: { print("main action!") },
+            clearAction: { print("clear action") }
+        )
+    }
+    .padding(.horizontal)
 }
 #endif

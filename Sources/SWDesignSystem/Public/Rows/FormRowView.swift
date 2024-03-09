@@ -73,19 +73,12 @@ public extension FormRowView {
 
 #if DEBUG
 #Preview {
-    Group {
-        ForEach(ColorScheme.allCases, id: \.self) { scheme in
-            VStack(spacing: 20) {
-                FormRowView(title: "Друзья", trailingContent: .textWithChevron("56 друзей"))
-                FormRowView(title: "Друзья", trailingContent: .textWithBadgeAndChevron("56 друзей", 5))
-                FormRowView(title: "Где тренируется", trailingContent: .textWithChevron("26 площадок"))
-                FormRowView(title: "Тренируюсь здесь", trailingContent: .toggle(.constant(true)))
-            }
-            .padding()
-            .background(Color.swBackground)
-            .environment(\.colorScheme, scheme)
-            .previewDisplayName(scheme == .dark ? "Dark" : "Light")
-        }
+    VStack(spacing: 20) {
+        FormRowView(title: "Друзья", trailingContent: .textWithChevron("56 друзей"))
+        FormRowView(title: "Друзья", trailingContent: .textWithBadgeAndChevron("56 друзей", 5))
+        FormRowView(title: "Где тренируется", trailingContent: .textWithChevron("26 площадок"))
+        FormRowView(title: "Тренируюсь здесь", trailingContent: .toggle(.constant(true)))
     }
+    .padding(.horizontal)
 }
 #endif

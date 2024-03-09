@@ -93,6 +93,6 @@ private extension DialogRowView {
             unreadCount: 3
         )
     )
-    .padding()
+    .padding(.horizontal)
 }
 #endif

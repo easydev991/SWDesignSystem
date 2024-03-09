@@ -1,4 +1,3 @@
-import CachedAsyncImage991
 import SwiftUI
 
 /// Вьюшка для краткой информации о пользователе
@@ -130,24 +129,18 @@ private extension UserRowView {
 
 #if DEBUG
 #Preview {
-    let baseModel: UserRowView.Mode.BaseModel = .init(
+    let baseModel = UserRowView.Mode.BaseModel(
         imageURL: .init(string: "https://workout.su/uploads/avatars/2019/10/2019-10-07-01-10-08-yow.jpg")!,
         name: "Beautifulbutterfly101",
         address: "Россия, Краснодар"
     )
-    return Group {
-        ForEach(ColorScheme.allCases, id: \.self) { scheme in
-            VStack(spacing: 20) {
-                UserRowView(mode: .regular(baseModel))
-                UserRowView(
-                    mode: .friendRequest(baseModel, .init(accept: {}, reject: {}))
-                )
-                .insideCardBackground(padding: 0)
-            }
-            .environment(\.colorScheme, scheme)
-            .previewDisplayName(scheme == .dark ? "Dark" : "Light")
-        }
+    return VStack(spacing: 20) {
+        UserRowView(mode: .regular(baseModel))
+        UserRowView(
+            mode: .friendRequest(baseModel, .init(accept: {}, reject: {}))
+        )
+        .insideCardBackground(padding: 0)
     }
-    .padding()
+    .padding(.horizontal)
 }
 #endif

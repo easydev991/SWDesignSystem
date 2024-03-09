@@ -19,12 +19,7 @@ struct CardBackgroundModifier: ViewModifier {
 
 #if DEBUG
 #Preview {
-    VStack(spacing: 16) {
-        Text("Light mode text")
-            .insideCardBackground()
-        Text("Dark mode text")
-            .insideCardBackground()
-            .environment(\.colorScheme, .dark)
-    }
+    Text("Текст для превью")
+        .insideCardBackground()
 }
 #endif

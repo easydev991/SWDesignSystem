@@ -1,4 +1,3 @@
-import CachedAsyncImage991
 import SwiftUI
 
 /// Вьюшка с комментарием (в списке комментариев)
@@ -118,6 +117,5 @@ private extension CommentRowView {
         editAction: {},
         deleteAction: {}
     )
-    .padding()
 }
 #endif

@@ -1,4 +1,3 @@
-import CachedAsyncImage991
 import SwiftUI
 
 /// Вьюшка с площадкой (в списке площадок)
@@ -76,33 +75,26 @@ private extension ParkRowView {
 
 #if DEBUG
 #Preview {
-    Group {
-        ForEach(ColorScheme.allCases, id: \.self) { scheme in
-            VStack(spacing: 12) {
-                ParkRowView(
-                    imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
-                    title: "N° 3 Легендарная / Средняя",
-                    address: "м. Партизанская, улица 2-я Советская",
-                    usersTrainHereText: "Тренируются 5 человек"
-                )
-                ParkRowView(
-                    imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
-                    title: "N° 3 Легендарная / Средняя",
-                    address: nil,
-                    usersTrainHereText: "Тренируются 5 человек"
-                )
-                ParkRowView(
-                    imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
-                    title: "N° 3 Легендарная / Средняя",
-                    address: "м. Партизанская, улица 2-я Советская",
-                    usersTrainHereText: "Здесь пока никто не тренируется"
-                )
-            }
-            .padding()
-            .background(Color.swBackground)
-            .environment(\.colorScheme, scheme)
-            .previewDisplayName(scheme == .dark ? "Dark" : "Light")
-        }
+    VStack(spacing: 12) {
+        ParkRowView(
+            imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
+            title: "N° 3 Легендарная / Средняя",
+            address: "м. Партизанская, улица 2-я Советская",
+            usersTrainHereText: "Тренируются 5 человек"
+        )
+        ParkRowView(
+            imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
+            title: "N° 3 Легендарная / Средняя",
+            address: nil,
+            usersTrainHereText: "Тренируются 5 человек"
+        )
+        ParkRowView(
+            imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
+            title: "N° 3 Легендарная / Средняя",
+            address: "м. Партизанская, улица 2-я Советская",
+            usersTrainHereText: "Здесь пока никто не тренируется"
+        )
     }
+    .padding(.horizontal)
 }
 #endif

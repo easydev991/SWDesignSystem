@@ -60,7 +60,7 @@ private extension SWTextEditor {
                 .scrollContentBackground(.hidden)
         } else {
             TextEditor(text: $text)
-                .accentColor(.swAccent)
+                .tint(.swAccent)
         }
     }
 }
@@ -89,6 +89,6 @@ private extension SWTextEditor {
             height: 100
         )
     }
-    .padding()
+    .padding(.horizontal)
 }
 #endif

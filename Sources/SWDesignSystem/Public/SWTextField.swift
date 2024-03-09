@@ -31,7 +31,8 @@ public struct SWTextField: View {
 
     public var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            textFieldView
+            textField
+                .tint(.swAccent)
                 .foregroundStyle(Color.swMainText)
                 .padding(12)
                 .background {
@@ -61,15 +62,6 @@ public extension SWTextField {
 }
 
 private extension SWTextField {
-    @ViewBuilder
-    var textFieldView: some View {
-        if #available(iOS 16.0, *) {
-            textField.tint(.swAccent)
-        } else {
-            textField.accentColor(.swAccent)
-        }
-    }
-
     @ViewBuilder
     var textField: some View {
         if isSecure {
@@ -127,7 +119,6 @@ private extension SWTextField {
             errorState: .message("Error message")
         )
     }
-    .padding()
-    .previewLayout(.sizeThatFits)
+    .padding(.horizontal)
 }
 #endif

@@ -24,6 +24,5 @@ struct DefaultWorkoutImage: View {
         DefaultWorkoutImage(size: .init(width: 45, height: 45))
         DefaultWorkoutImage(size: .init(width: 60, height: 60))
     }
-    .padding()
 }
 #endif
