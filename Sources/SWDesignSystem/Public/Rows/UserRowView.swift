@@ -104,7 +104,7 @@ private extension UserRowView {
 
     var leadingImage: some View {
         CachedImage(url: baseModel.imageURL, mode: .userListItem)
-            .borderedClipshape()
+            .borderedCircleClipShape()
     }
 
     var userNameView: some View {

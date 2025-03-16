@@ -30,7 +30,7 @@ public struct ProfileView: View {
     public var body: some View {
         VStack(spacing: 12) {
             CachedImage(url: imageURL, mode: .profileAvatar)
-                .borderedClipshape(.roundedRectangle)
+                .borderedRoundedRectClipShape()
             VStack(spacing: 8) {
                 Text(login)
                     .lineLimit(2)

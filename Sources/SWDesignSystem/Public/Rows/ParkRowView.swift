@@ -76,12 +76,16 @@ private extension ParkRowView {
 #if DEBUG
 #Preview {
     VStack(spacing: 12) {
-        ParkRowView(
-            imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
-            title: "N° 3 Легендарная / Средняя",
-            address: "м. Партизанская, улица 2-я Советская",
-            usersTrainHereText: "Тренируются 5 человек"
-        )
+        Button {
+            print("tap!")
+        } label: {
+            ParkRowView(
+                imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
+                title: "N° 3 Легендарная / Средняя",
+                address: "м. Партизанская, улица 2-я Советская",
+                usersTrainHereText: "Тренируются 5 человек"
+            )
+        }
         ParkRowView(
             imageURL: URL(string: "https://workout.su/uploads/userfiles/измайлово.jpg"),
             title: "N° 3 Легендарная / Средняя",

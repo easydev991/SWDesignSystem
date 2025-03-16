@@ -10,7 +10,7 @@ struct CardBackgroundModifier: ViewModifier {
         content
             .padding(padding)
             .background {
-                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                RoundedRectangle(cornerRadius: 12)
                     .fill(Color.swCardBackground)
                     .withShadow()
             }

@@ -51,7 +51,7 @@ public extension ListRowView {
         }
 
         public static func makeIconView(with name: Icons.Regular) -> some View {
-            RoundedRectangle(cornerRadius: 8, style: .continuous)
+            RoundedRectangle(cornerRadius: 8)
                 .fill(Color.swTintedButton)
                 .frame(width: 34, height: 34)
                 .overlay {

@@ -33,6 +33,8 @@ public extension Color {
     static let swSearchBackground = Color(.swSearchBackground)
     /// Ошибки
     static let swError = Color(.swError)
+    /// Цвет таббара
+    static let swTabBar = Color(.swTabBar)
 }
 
 #if DEBUG
@@ -41,13 +43,13 @@ public extension Color {
         .swBackground, .swCardBackground, .swSmallElements, .swSeparators,
         .swMainText, .swAccent, .swFilledButtonText, .swFilledButtonPressed,
         .swDisabledButton, .swDisabledButtonText, .swTintedButton,
-        .swTintedButtonPressed, .swAddPhotoButton, .swError
+        .swTintedButtonPressed, .swAddPhotoButton, .swError, .swTabBar
     ]
     return ScrollView {
         VStack(spacing: 4) {
             ForEach(colors, id: \.self) { color in
                 Circle()
-                    .foregroundStyle(color)
+                    .fill(color)
                     .frame(width: 50, height: 50)
             }
         }

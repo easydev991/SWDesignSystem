@@ -8,9 +8,7 @@ public struct CommentRowView: View {
     private let bodyText: String
     private let isCommentByMainUser: Bool
     private let isNetworkConnected: Bool
-    private let reportAction: () -> Void
-    private let editAction: () -> Void
-    private let deleteAction: () -> Void
+    private let action: (Action) -> Void
 
     public init(
         avatarURL: URL?,
@@ -19,9 +17,7 @@ public struct CommentRowView: View {
         bodyText: String,
         isCommentByMainUser: Bool,
         isNetworkConnected: Bool,
-        reportAction: @escaping () -> Void,
-        editAction: @escaping () -> Void,
-        deleteAction: @escaping () -> Void
+        action: @escaping (Action) -> Void
     ) {
         self.avatarURL = avatarURL
         self.userName = userName
@@ -29,9 +25,7 @@ public struct CommentRowView: View {
         self.bodyText = bodyText
         self.isCommentByMainUser = isCommentByMainUser
         self.isNetworkConnected = isNetworkConnected
-        self.reportAction = reportAction
-        self.editAction = editAction
-        self.deleteAction = deleteAction
+        self.action = action
     }
 
     public var body: some View {
@@ -44,6 +38,8 @@ public struct CommentRowView: View {
                 }
                 .lineLimit(1)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .contentShape(.rect)
+                .onTapGesture { action(.openProfile) }
                 if isNetworkConnected {
                     menuButton
                 }
@@ -54,23 +50,40 @@ public struct CommentRowView: View {
     }
 }
 
+public extension CommentRowView {
+    enum Action {
+        /// Пожаловаться
+        case report
+        /// Редактировать
+        case edit
+        /// Удалить
+        case delete
+        /// Открыть профиль автора комментария
+        case openProfile
+    }
+}
+
 private extension CommentRowView {
     var leadingImage: some View {
-        CachedImage(url: avatarURL, mode: .commentAvatar)
-            .borderedClipshape()
+        CachedImage(
+            url: avatarURL,
+            mode: .commentAvatar,
+            didTapImage: { _ in action(.openProfile) }
+        )
+        .borderedCircleClipShape()
     }
 
     var menuButton: some View {
         Menu {
             if isCommentByMainUser {
-                Button(action: editAction) {
+                Button(action: { action(.edit) }) {
                     Label("Изменить", systemImage: Icons.Regular.pencil.rawValue)
                 }
-                Button(role: .destructive, action: deleteAction) {
+                Button(role: .destructive, action: { action(.delete) }) {
                     Label("Удалить", systemImage: Icons.Regular.trash.rawValue)
                 }
             } else {
-                Button(role: .destructive, action: reportAction) {
+                Button(role: .destructive, action: { action(.report) }) {
                     Label("Пожаловаться", systemImage: Icons.Regular.exclamation.rawValue)
                 }
             }
@@ -106,16 +119,29 @@ private extension CommentRowView {
 
 #if DEBUG
 #Preview {
-    CommentRowView(
-        avatarURL: .init(string: "https://workout.su/uploads/avatars/2019/10/2019-10-07-01-10-08-yow.jpg")!,
-        userName: "Kahar",
-        dateText: "21 мая 2023",
-        bodyText: "Классная площадка, часто тренируюсь здесь с друзьями",
-        isCommentByMainUser: false,
-        isNetworkConnected: true,
-        reportAction: {},
-        editAction: {},
-        deleteAction: {}
-    )
+    VStack(spacing: 20) {
+        CommentRowView(
+            avatarURL: .init(string: "https://workout.su/uploads/avatars/2019/10/2019-10-07-01-10-08-yow.jpg")!,
+            userName: "Kahar",
+            dateText: "21 мая 2023",
+            bodyText: "Классная площадка, часто тренируюсь здесь с друзьями",
+            isCommentByMainUser: false,
+            isNetworkConnected: true,
+            action: { option in
+                print("action: \(option)")
+            }
+        )
+        CommentRowView(
+            avatarURL: .init(string: "https://workout.su/uploads/avatars/2019/10/2019-10-07-01-10-08-yow.jpg")!,
+            userName: "Kahar",
+            dateText: "21 мая 2023",
+            bodyText: "Классная площадка, часто тренируюсь здесь с друзьями",
+            isCommentByMainUser: true,
+            isNetworkConnected: true,
+            action: { option in
+                print("action: \(option)")
+            }
+        )
+    }
 }
 #endif

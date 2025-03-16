@@ -21,16 +21,24 @@ public struct CachedImage: View {
 
     public var body: some View {
         CachedAsyncImage991(url: url) { uiImage in
-            Image(uiImage: uiImage)
-                .resizable()
-                .scaledToFill()
-                .onTapGesture { didTapImage?(uiImage) }
+            if let didTapImage {
+                makeImageView(uiImage)
+                    .onTapGesture { didTapImage(uiImage) }
+            } else {
+                makeImageView(uiImage)
+            }
         } placeholder: {
             DefaultWorkoutImage(size: mode.size)
         }
         .frame(width: mode.size.width, height: mode.size.height)
         .clipped()
-        .cornerRadius(cornerRadius)
+        .clipShape(.rect(cornerRadius: cornerRadius))
+    }
+    
+    private func makeImageView(_ uiImage: UIImage) -> some View {
+        Image(uiImage: uiImage)
+            .resizable()
+            .scaledToFill()
     }
 }
 

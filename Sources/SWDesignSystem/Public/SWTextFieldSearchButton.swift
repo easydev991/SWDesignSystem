@@ -41,7 +41,7 @@ public struct SWTextFieldSearchButton: View {
         .padding(.vertical, 7)
         .foregroundStyle(Color.swSearchForeground)
         .background {
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
+            RoundedRectangle(cornerRadius: 10)
                 .fill(Color.swSearchBackground)
         }
     }

@@ -1,23 +1,23 @@
 import SwiftUI
 
 /// Модификатор, добавляющий бордюр выбранной формы с цветом `swAccent`
-public struct BorderedClipshapeModifier: ViewModifier {
+struct BorderedClipShapeModifier: ViewModifier {
     let clipShape: ClipShape
 
-    public func body(content: Content) -> some View {
+    func body(content: Content) -> some View {
         switch clipShape {
-        case .roundedRectangle:
+        case .roundedRect:
             content
                 .clipShape(
-                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    RoundedRectangle(cornerRadius: 12)
                 )
                 .overlay {
-                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    RoundedRectangle(cornerRadius: 12)
                         .stroke(Color.swAccent, lineWidth: 2)
                 }
         case .circle:
             content
-                .clipShape(Circle())
+                .clipShape(.circle)
                 .overlay {
                     Circle()
                         .stroke(Color.swAccent, lineWidth: 2)
@@ -26,9 +26,9 @@ public struct BorderedClipshapeModifier: ViewModifier {
     }
 }
 
-public extension BorderedClipshapeModifier {
+extension BorderedClipShapeModifier {
     enum ClipShape {
-        case roundedRectangle
+        case roundedRect
         case circle
     }
 }
@@ -40,12 +40,12 @@ public extension BorderedClipshapeModifier {
             .resizable()
             .scaledToFit()
             .frame(width: 80, height: 80)
-            .borderedClipshape(.circle)
+            .borderedCircleClipShape()
         Image.defaultWorkout
             .resizable()
             .scaledToFit()
             .frame(width: 120, height: 120)
-            .borderedClipshape(.roundedRectangle)
+            .borderedRoundedRectClipShape()
     }
 }
 #endif

@@ -79,6 +79,5 @@ public enum Icons {
             }
         }
     }
-    .previewDisplayName("Icons")
 }
 #endif

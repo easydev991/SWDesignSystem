@@ -1,11 +1,14 @@
 import SwiftUI
 
 public extension View {
-    /// Придает вьюшке форму с бордюром цвета `swAccent`
-    func borderedClipshape(
-        _ shape: BorderedClipshapeModifier.ClipShape = .circle
-    ) -> some View {
-        modifier(BorderedClipshapeModifier(clipShape: shape))
+    /// Придает вьюшке форму `circle` с бордюром цвета `swAccent`
+    func borderedCircleClipShape() -> some View {
+        modifier(BorderedClipShapeModifier(clipShape: .circle))
+    }
+    
+    /// Придает вьюшке форму `roundedRectangle` с бордюром цвета `swAccent`
+    func borderedRoundedRectClipShape() -> some View {
+        modifier(BorderedClipShapeModifier(clipShape: .roundedRect))
     }
     
     /// Добавляет фон для карточки

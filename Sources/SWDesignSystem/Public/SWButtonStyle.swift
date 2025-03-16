@@ -38,7 +38,7 @@ public struct SWButtonStyle: ButtonStyle {
         .padding(.horizontal, size.horizontalPadding)
         .frame(maxWidth: maxWidth)
         .background {
-            RoundedRectangle(cornerRadius: 12, style: .continuous)
+            RoundedRectangle(cornerRadius: 12)
                 .fill(backgroundColor(configuration.isPressed))
         }
         .scaleEffect(configuration.isPressed ? 0.98 : 1)
@@ -178,6 +178,5 @@ extension SWButtonStyle.Size {
         .listRowBackground(Color.clear)
     }
     .listStyle(.grouped)
-    .previewDisplayName("SWButtonStyle")
 }
 #endif
