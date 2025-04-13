@@ -66,6 +66,7 @@ public extension ListRowView {
     }
 
     /// Контент справа
+    @MainActor
     enum TrailingContent {
         /// Пусто
         case empty

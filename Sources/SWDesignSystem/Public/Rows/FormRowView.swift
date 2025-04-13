@@ -33,6 +33,7 @@ public struct FormRowView: View {
 }
 
 public extension FormRowView {
+    @MainActor
     enum TrailingContent {
         /// Тоггл
         case toggle(Binding<Bool>)
