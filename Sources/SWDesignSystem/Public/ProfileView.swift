@@ -4,6 +4,7 @@ import SwiftUI
 ///
 /// Фото, пол, возраст, страна и город
 public struct ProfileView: View {
+    @Environment(\.isLoading) private var isLoading
     private let imageURL: URL?
     private let login: String
     private let genderWithAge: String
@@ -41,15 +42,16 @@ public struct ProfileView: View {
                     HStack(spacing: 8) {
                         Icons.Regular.person.view
                             .symbolVariant(.circle)
-                        Text(genderWithAge)
+                        Text(isLoading ? "Загрузка..." : genderWithAge)
                     }
                     HStack(spacing: 8) {
                         Icons.Regular.location.view
                             .symbolVariant(.circle)
-                        Text(countryAndCity)
+                        Text(isLoading ? "Загрузка..." : countryAndCity)
                             .lineLimit(2)
                     }
                 }
+                .redacted(reason: isLoading ? .placeholder : [])
                 .foregroundStyle(Color.swSmallElements)
             }
         }
@@ -57,7 +59,7 @@ public struct ProfileView: View {
 }
 
 #if DEBUG
-#Preview {
+#Preview("Обычное состояние") {
     ProfileView(
         imageURL: nil,
         login: "Beautifulbutterfly101",
@@ -65,5 +67,16 @@ public struct ProfileView: View {
         countryAndCity: "Россия, Краснодар"
     )
     .padding(.horizontal, 40)
+}
+
+#Preview("Состояние загрузки") {
+    ProfileView(
+        imageURL: nil,
+        login: "Beautifulbutterfly101",
+        genderWithAge: "Женщина, 30 лет",
+        countryAndCity: "Россия, Краснодар"
+    )
+    .padding(.horizontal, 40)
+    .loadingOverlay(if: true)
 }
 #endif

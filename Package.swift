@@ -5,12 +5,13 @@ import PackageDescription
 
 let package = Package(
     name: "SWDesignSystem",
+    defaultLocalization: "ru",
     platforms: [.iOS(.v15)],
     products: [
         .library(name: "SWDesignSystem", targets: ["SWDesignSystem"])
     ],
     dependencies: [
-        .package(url: "https://github.com/OlegEremenko991/CachedAsyncImage991", from: "1.2.0")
+        .package(url: "https://github.com/OlegEremenko991/CachedAsyncImage991", from: "1.3.0")
     ],
     targets: [
         .target(
