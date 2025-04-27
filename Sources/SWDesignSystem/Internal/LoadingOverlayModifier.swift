@@ -6,6 +6,7 @@ struct LoadingOverlayModifier: ViewModifier {
     func body(content: Content) -> some View {
         ZStack {
             content
+                .environment(\.isLoading, isLoading)
                 .opacity(isLoading ? 0.5 : 1)
                 .disabled(isLoading)
             if isLoading {

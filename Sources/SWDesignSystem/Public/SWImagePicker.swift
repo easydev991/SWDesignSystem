@@ -2,18 +2,25 @@ import SwiftUI
 
 /// Пикер для одной фотографии с возможностью обрезки
 public struct SWImagePicker: UIViewControllerRepresentable {
-    let completion: (UIImage) -> Void
+    private let sourceType: UIImagePickerController.SourceType
+    private let completion: (UIImage) -> Void
     @Environment(\.dismiss) private var dismiss
-    
+
     /// Инициализатор
-    /// - Parameter completion: Возвращает выбранную фотографию
-    public init(completion: @escaping (UIImage) -> Void) {
+    /// - Parameters:
+    ///   - sourceType: Тип источника для пикера, по умолчанию галерея фото
+    ///   - completion: Возвращает выбранную фотографию
+    public init(
+        sourceType: UIImagePickerController.SourceType = .photoLibrary,
+        completion: @escaping (UIImage) -> Void
+    ) {
+        self.sourceType = sourceType
         self.completion = completion
     }
 
     public func makeUIViewController(context: Context) -> UIImagePickerController {
         let picker = UIImagePickerController()
-        picker.sourceType = .photoLibrary
+        picker.sourceType = sourceType
         picker.allowsEditing = true
         picker.delegate = context.coordinator
         return picker
