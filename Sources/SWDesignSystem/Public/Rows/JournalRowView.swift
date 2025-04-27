@@ -134,7 +134,11 @@ private extension JournalRowView {
             Menu {
                 ForEach(model.menuOptions) { model in
                     Button(role: model.option.buttonRole, action: model.action) {
-                        Label(model.option.title, systemImage: model.option.systemImageName)
+                        Label {
+                            Text(model.option.title, bundle: .module)
+                        } icon: {
+                            Image(systemName: model.option.systemImageName)
+                        }
                     }
                 }
             } label: {

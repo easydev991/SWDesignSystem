@@ -77,14 +77,26 @@ private extension CommentRowView {
         Menu {
             if isCommentByMainUser {
                 Button(action: { action(.edit) }) {
-                    Label("Изменить", systemImage: Icons.Regular.pencil.rawValue)
+                    Label {
+                        Text("Изменить", bundle: .module)
+                    } icon: {
+                        Image(systemName: Icons.Regular.pencil.rawValue)
+                    }
                 }
                 Button(role: .destructive, action: { action(.delete) }) {
-                    Label("Удалить", systemImage: Icons.Regular.trash.rawValue)
+                    Label {
+                        Text("Удалить", bundle: .module)
+                    } icon: {
+                        Image(systemName: Icons.Regular.trash.rawValue)
+                    }
                 }
             } else {
                 Button(role: .destructive, action: { action(.report) }) {
-                    Label("Пожаловаться", systemImage: Icons.Regular.exclamation.rawValue)
+                    Label {
+                        Text("Пожаловаться", bundle: .module)
+                    } icon: {
+                        Image(systemName: Icons.Regular.exclamation.rawValue)
+                    }
                 }
             }
         } label: {

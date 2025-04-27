@@ -53,9 +53,9 @@ public struct ItemListScreen: View {
         .searchable(
             text: $searchQuery,
             placement: .navigationBarDrawer(displayMode: .always),
-            prompt: Text("Поиск")
+            prompt: Text("Поиск", bundle: .module)
         )
-        .navigationTitle(mode.title)
+        .navigationTitle(Text(mode.title, bundle: .module))
         .navigationBarTitleDisplayMode(.inline)
     }
 }

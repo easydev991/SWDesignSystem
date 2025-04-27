@@ -35,6 +35,6 @@ private struct LoadingIndicator: View {
 
 #if DEBUG
 #Preview {
-    Text("Loading...").loadingOverlay(if: true)
+    Text("Загрузка...").loadingOverlay(if: true)
 }
 #endif
