@@ -74,10 +74,10 @@ public extension JournalRowView {
                 case edit, setup, report, delete
                 var title: LocalizedStringKey {
                     switch self {
-                    case .edit: "Изменить"
-                    case .setup: "Настроить"
-                    case .report: "Пожаловаться"
-                    case .delete: "Удалить"
+                    case .edit: "Edit"
+                    case .setup: "Configure"
+                    case .report: "Report"
+                    case .delete: "Delete"
                     }
                 }
 

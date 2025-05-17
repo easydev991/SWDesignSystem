@@ -2,49 +2,11 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "shouldTranslate" : false
     },
-    "Выбери город" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select a city"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выбери город"
-          }
-        }
-      }
-    },
-    "Выбери страну" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select a country"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выбери страну"
-          }
-        }
-      }
-    },
-    "Добавить" : {
+    "Accept" : {
       "comment" : "Принять заявку на добавление в друзья",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Accept"
-          }
-        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -53,31 +15,8 @@
         }
       }
     },
-    "Загрузка..." : {
-      "extractionState" : "manual",
+    "Close" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Loading…"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Загрузка..."
-          }
-        }
-      }
-    },
-    "Закрыть" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Close"
-          }
-        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -86,30 +25,8 @@
         }
       }
     },
-    "Изменить" : {
+    "Configure" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Edit"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Изменить"
-          }
-        }
-      }
-    },
-    "Настроить" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Configure"
-          }
-        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -118,14 +35,18 @@
         }
       }
     },
-    "Отклонить" : {
+    "Contact us" : {
       "localizations" : {
-        "en" : {
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Decline"
+            "value" : "Напиши нам"
           }
-        },
+        }
+      }
+    },
+    "Decline" : {
+      "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -134,14 +55,80 @@
         }
       }
     },
-    "Пожаловаться" : {
+    "Delete" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить"
+          }
+        }
+      }
+    },
+    "Edit" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изменить"
+          }
+        }
+      }
+    },
+    "Help.CityNotFound" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Report"
+            "value" : "Didn’t find your city?"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет твоего города?"
+          }
+        }
+      }
+    },
+    "Help.CountryNotFound" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Didn’t find your country?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет твоей страны?"
+          }
+        }
+      }
+    },
+    "Pick a city" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбери город"
+          }
+        }
+      }
+    },
+    "Pick a country" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбери страну"
+          }
+        }
+      }
+    },
+    "Report" : {
+      "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -150,34 +137,12 @@
         }
       }
     },
-    "Поиск" : {
+    "Search" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search"
-          }
-        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Поиск"
-          }
-        }
-      }
-    },
-    "Удалить" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Delete"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Удалить"
           }
         }
       }
