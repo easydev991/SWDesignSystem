@@ -90,11 +90,11 @@ private extension UserRowView {
                 addressViewIfAvailable
                 HStack(spacing: 8) {
                     Button(action: actions.accept) {
-                        Text("Добавить", bundle: .module)
+                        Text("Accept", bundle: .module)
                     }
                     .buttonStyle(SWButtonStyle(mode: .filled, size: .small))
                     Button(action: actions.reject) {
-                        Text("Отклонить", bundle: .module)
+                        Text("Decline", bundle: .module)
                     }
                     .buttonStyle(SWButtonStyle(mode: .tinted, size: .small))
                 }

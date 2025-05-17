@@ -21,7 +21,7 @@ public struct CloseButton: View {
         switch mode {
         case .text:
             Button(action: action) {
-                Text("Закрыть", bundle: .module)
+                Text("Close", bundle: .module)
             }
         case .xmark:
             Button(action: action) {

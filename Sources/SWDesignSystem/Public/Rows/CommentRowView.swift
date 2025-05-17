@@ -78,14 +78,14 @@ private extension CommentRowView {
             if isCommentByMainUser {
                 Button(action: { action(.edit) }) {
                     Label {
-                        Text("Изменить", bundle: .module)
+                        Text("Edit", bundle: .module)
                     } icon: {
                         Image(systemName: Icons.Regular.pencil.rawValue)
                     }
                 }
                 Button(role: .destructive, action: { action(.delete) }) {
                     Label {
-                        Text("Удалить", bundle: .module)
+                        Text("Delete", bundle: .module)
                     } icon: {
                         Image(systemName: Icons.Regular.trash.rawValue)
                     }
@@ -93,7 +93,7 @@ private extension CommentRowView {
             } else {
                 Button(role: .destructive, action: { action(.report) }) {
                     Label {
-                        Text("Пожаловаться", bundle: .module)
+                        Text("Report", bundle: .module)
                     } icon: {
                         Image(systemName: Icons.Regular.exclamation.rawValue)
                     }
