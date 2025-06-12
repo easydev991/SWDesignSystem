@@ -1,8 +1,9 @@
 # SWDesignSystem
 
-<img alt="Static Badge" src="https://img.shields.io/badge/Swift_Version-6.0-orange"> <img alt="Static Badge" src="https://img.shields.io/badge/iOS_Version-15-blue">
+[<img alt="Xcode Version" src="https://img.shields.io/badge/Xcode_Version-16.3-blue">](https://developer.apple.com/xcode/)
+[<img alt="Swift Version" src="https://img.shields.io/badge/Swift_Version-6.0-orange">](https://swift.org)
+[<img alt="iOS Version" src="https://img.shields.io/badge/iOS_Version-15-4F9153">](https://www.apple.com/ios/)
 
 Дизайн-система для приложения **Street Workout: Площадки**
 - [Ссылка на фигму](https://clck.ru/36D7Sd)
-- [Ссылка на AppStore](https://apps.apple.com/app/id1035159361)
-- [Ссылка на код приложения](https://github.com/easydev991/SwiftUI-WorkoutApp)
+- [Ссылка на приложение](https://github.com/easydev991/SwiftUI-WorkoutApp)
